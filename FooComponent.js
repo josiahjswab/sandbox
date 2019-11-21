@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class FooComponent extends Component {
+export default class Div-Templates extends Component {
 
     render() {
         return (
@@ -14,7 +14,7 @@ export default class FooComponent extends Component {
 
                 {/* Information block. */}
 
-                <div className="infomative-block">
+                <div className="information-block">
                     <h1 className="text-align-center"></h1>
                     <h3 className="text-align-center"></h3>
                     <div className="talk-text">
@@ -22,11 +22,19 @@ export default class FooComponent extends Component {
                     </div>
                 </div>
 
-                {/* Cards block. */}
+                {/* Quote block */}
 
-                <div className="card-block-container flex-container">
+                <div className="quote-wrapper">
+                        <h1 className="text-align-center">{/*Title*/}</h1>
+                        <p className="rm-browser-margin text-align-center talk-text">Just about anyone can learn to code if they have grit, basic problem solving skills, and are open to learning. We take people from zero experience to job ready.</p>
+                        <p className="rm-browser-margin text-align-center add-top-padding"><span className="emphasised-background">Michael Roberts Jr</span></p>
+                </div>
+
+                {/* Testimonial block. */}
+
+                <div className="testimonial-block-wrapper flex-wrap">
                     {/* The following div is a single card */}
-                    <div className="card-block">
+                    <div className="testimonial-block">
                         <div className="talk-bubble talk-bubble-spike">
                             <div className="talk-text">
                                 <p className="rm-browser-margin">
@@ -51,9 +59,28 @@ export default class FooComponent extends Component {
                     {/* Copy above div as many times as needed and paste here. */}
                 </div>
 
+                {/* Card shadow box */}
+
+                <div className="card-block flex-wrap">
+                    <div className="card-bubble text-align-center shadow">
+                        <div className="talk-text rm-top-padding text-align-center">
+                            <div className='bookmark'>
+                                <div className="circle-center flex-center shadow">
+                                    <img className="icon-fixture" src=""></img>
+                                </div>
+                            </div>
+
+                            <h2>Intro to web <span className='block'> development</span></h2>
+                            <p className="rm-browser-margin">
+                                Start using HTML, CSS, and JavaScript to build websites and learn the basics. Begin to learn how to learn to code effectively. Start ramping up on the technologies used to build modern websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* END */}
 
             </div>
-                );
-            }
+        );
+    }
 }
