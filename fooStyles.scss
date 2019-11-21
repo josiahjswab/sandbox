@@ -1,5 +1,21 @@
 //
+.background-img {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(https://1m9jh49h65z44trv529rh6nm-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/classroom-large-b-w.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    // Padding exists to push element inside background image.
+    padding: 0px 30px;
+    // Cover resizes the image to cover container
+    background-size: cover;
+    height: calc(100vh - 85px);
+}
 .display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-row {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,35 +24,34 @@
 .text-align-center {
     text-align: center;
 }
-.center-img {
-
-}
-
 // Quick inline rule.
 .inline {
     display: inline;
 }
-// Block flex style.
-.container {
-    height: 600px;
+// Centering flex container.
+.flex-container {
+    //TODO ⬇️ adjust container height
+    height: auto;
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap
-    
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
+.card-block {
+    max-width: 400px;
+}
 // Talk bubble.
 .talk-bubble {
     margin: 20px;
     display: inline-block;
     position: relative;
-    max-width: 500px;
     height: auto;
     background-color: #F6F6F6;
     border-radius: 10px;
     font-style: italic;
 }
 // Talk bubble spike.
-.tri-right.btm-left-in:after {
+.talk-bubble-spike:after {
     content: ' ';
     position: absolute;
     width: 0;
@@ -49,7 +64,7 @@
     border-color: #F6F6F6 transparent transparent #F6F6F6;
 }
 // talk bubble contents 
-.talktext {
+.talk-text {
     padding: 2em;
     text-align: left;
     line-height: 1.5em;
@@ -60,7 +75,7 @@
     font-weight: bold;
 }
 // Remove webkit p margins.
-.talktext p {
+.rm-browser-margin {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
 }

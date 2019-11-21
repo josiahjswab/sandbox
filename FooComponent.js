@@ -6,7 +6,6 @@ export default class FooComponent extends Component {
         return (
             <div>
 
-                
                 {/* Image block. */}
 
                 <div className="image-block">
@@ -16,21 +15,21 @@ export default class FooComponent extends Component {
                 {/* Information block. */}
 
                 <div className="infomative-block">
-                    <h1></h1>
-                    <h3></h3>
-                    <div>
-                        <p></p>
+                    <h1 className="text-align-center"></h1>
+                    <h3 className="text-align-center"></h3>
+                    <div className="talk-text">
+                        <p className="rm-browser-margin"></p>
                     </div>
                 </div>
 
                 {/* Cards block. */}
 
-                <div className="card-block-container">
+                <div className="card-block-container flex-container">
                     {/* The following div is a single card */}
-                    <div className='card-block'>
-                        <div class="talk-bubble tri-right btm-left-in">
-                            <div class="talktext">
-                                <p>
+                    <div className="card-block">
+                        <div className="talk-bubble talk-bubble-spike">
+                            <div className="talk-text">
+                                <p className="rm-browser-margin">
                                     Michael was an instructor at the code school that originally got me into software development and
                                     jump-started my career path. He is extremely knowledgeable and was able to answer any questions I brought to
                                     the table. Unlike others, he wouldn’t just guide you to the solution to your problem. Instead, he would
@@ -42,18 +41,17 @@ export default class FooComponent extends Component {
                             </div>
                         </div>
                         {/* Student photo icon and name */}
-                        <div class='talktext'>
-                            <img src='' alt='HS'></img>
-                            <div class='inline'><span class='emphasised-text'>Steven Schwarzmann,</span> UI Engineer @ CalSense</div>
+                        <div className="talktext flex-row">
+                            <img src="" alt="Icon"></img>
+                            <div className="inline">
+                                <span className="emphasised-text">Steven Schwarzmann</span> UI Engineer @ CalSense
+                            </div>
                         </div>
                     </div>
-
+                    {/* Copy above div as many times as needed and paste here. */}
                 </div>
 
-
-
-
-
+                {/* END */}
 
             </div>
                 );
