@@ -1,0 +1,66 @@
+//
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// Text alignment.
+.text-align-center {
+    text-align: center;
+}
+.center-img {
+
+}
+
+// Quick inline rule.
+.inline {
+    display: inline;
+}
+// Block flex style.
+.container {
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap
+    
+}
+
+// Talk bubble.
+.talk-bubble {
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    max-width: 500px;
+    height: auto;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    font-style: italic;
+}
+// Talk bubble spike.
+.tri-right.btm-left-in:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: #F6F6F6 transparent transparent #F6F6F6;
+}
+// talk bubble contents 
+.talktext {
+    padding: 2em;
+    text-align: left;
+    line-height: 1.5em;
+}
+// Student name.
+.emphasised-text {
+    color: maroon;
+    font-weight: bold;
+}
+// Remove webkit p margins.
+.talktext p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
