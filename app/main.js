@@ -2,5 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import FlexStyles from './components/FlexStyles'
+import RecursiveFunction from './components/RecursiveFunction'
 
-ReactDOM.render(<FlexStyles/>, document.getElementById("root") )
+ReactDOM.render(<RecursiveFunction/>, document.getElementById("root") )
