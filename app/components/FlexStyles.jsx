@@ -7,6 +7,7 @@ export default function SomeComponent() {
       <div className="square"></div>
       <div className="square"></div>
       <div className="square"></div>
+      <div className="square"></div>
     </div>
   );
 
