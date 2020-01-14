@@ -1,0 +1,157 @@
+//
+$theme-color-primary: rgb(255, 255, 255);
+$theme-color-primary-darkened: darken($theme-color-primary, 20%);
+$theme-color-secondary: rgb(47, 49, 50);
+$theme-color-contrast: rgb(133, 26, 27);
+
+$theme-color-footer-primary: $theme-color-secondary;
+$theme-color-footer-secondary: #363839;
+$theme-color-footer-terciary: rgb(36, 37, 38);
+$theme-color-footer-font: rgb(183, 183, 183);
+// above is already in project
+
+$talk-bubble-color: darken($theme-color-primary, 15%) 
+
+@mixin box-base {
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    height: auto;
+    border-radius: 10px;
+}
+
+//// For reference.
+// .background-img {
+//     background-color: rgba(255, 255, 255, 0);
+//     background-image: url(https://1m9jh49h65z44trv529rh6nm-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/classroom-large-b-w.png);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     // Padding exists to push element inside background image.
+//     padding: 0px 30px;
+//     // Cover resizes the image to cover container
+//     background-size: cover;
+//     height: calc(100vh - 85px);
+// }
+
+
+//Flex and positioning styles
+.flex-wrap {
+    //TODO ⬇️ adjust container height
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-align-center {
+    text-align: center;
+}
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+// Testimonial styles
+.testimonial-block {
+    max-width: 400px;
+}
+.talk-bubble {
+    @include box-base;
+    background-color: $talk-bubble-color;
+    font-style: italic;
+}
+.talk-bubble-spike:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: #F6F6F6 transparent transparent #F6F6F6;
+}
+.shadow {
+	box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+// Card styles
+.card-bubble {
+    @include box-base;
+    background-color: $theme-color-primary;
+    max-height: 600px;
+    max-width: 300px;
+}
+.bookmark {
+    width: 200px;
+    height: 200px;
+    background: $talk-bubble-color;
+    margin: 0 auto 60px auto;
+}
+.bookmark:after {
+    content: '';
+    display: block;
+    border: 100px solid transparent;
+    position: static;
+    bottom: 0;
+    width: 0; 
+    height: 0; 
+    border-left: 100px solid $talk-bubble-color;
+    border-right: 100px solid $talk-bubble-color;
+    border-bottom: 50px solid transparent;
+}
+.circle-center {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $theme-color-primary;
+    margin: 0 auto;
+    transform: translateY(50%);
+}
+// Remove webkit p margins.
+.rm-browser-margin {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+.rm-top-padding {
+    padding: 0 2em 2em 2em
+}
+.add-top-padding {
+	padding-bottom: 2em;
+}
+.icon-fixture {
+    width: 30px;
+    height: 30px;
+    background: black;
+}
+// Padding modifiers
+.talk-text {
+    padding: 2em;
+    text-align: left;
+    line-height: 150%;
+    letter-spacing: -.5px;
+}
+.emphasised-text {
+    color: $theme-color-contrast;
+    font-weight: bold;
+}
+.emphasised-background {
+    background: lighten($theme-color-contrast, 65%);
+    border-radius: 10px;
+    padding: 1%;
+    font-weight: 600;
+}
