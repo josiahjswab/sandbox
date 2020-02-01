@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 export default function RecursiveFunction() {
   const [ x, setX ] = useState(5);
-
-
   const factorial = () => {
     if ( x <= 1 ) {
       setX( 1 );
@@ -12,7 +10,7 @@ export default function RecursiveFunction() {
 
     }
   }
-
+  
   useEffect(() => {
     factorial();
   }, [x] )
@@ -23,5 +21,4 @@ export default function RecursiveFunction() {
       <p>{ x }</p>
     </div>
   );
-
 }
