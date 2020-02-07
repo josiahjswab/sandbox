@@ -10,6 +10,8 @@ export default class Moment extends React.Component {
       day: '',
       hour: '',
       minute: '',
+      message: '',
+      url: '',
     };
     this.changeHandler = this.changeHandler.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
@@ -20,8 +22,12 @@ export default class Moment extends React.Component {
 
   clickHandler() {
     
-    let dateSelection = `${this.state.year}-${this.state.month}-${this.state.day}T${hour}:${minute}.999Z`
-    console.log(dateSelection)
+    let cronJob = {
+      dateSelection: `${this.state.year}-${this.state.month}-${this.state.day}T${this.state.hour}:${this.stateminute}.999Z`,
+      message: this.state.message,
+      url: this.state.url
+    }
+    console.log(cronJob)
   }
 
   componentDidMount() {
@@ -58,7 +64,14 @@ export default class Moment extends React.Component {
         </section>
         <section className='some-component flex-center block-standard'>
 
-
+          <div>
+            <p>Message</p>
+            <textarea name='message' onChange={this.changeHandler} value={this.state.message}></textarea>
+          </div>
+          <div>
+            <p>Link</p>
+            <input name='url' onChange={this.changeHandler} value={this.state.url}></input>
+          </div>
           <div>
             <p>Year</p>
             <input name='year' onChange={this.changeHandler} value={this.state.year} type='number'></input>
